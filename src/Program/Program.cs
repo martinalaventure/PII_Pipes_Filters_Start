@@ -39,7 +39,7 @@ namespace CompAndDel
             pictureProvider.SavePicture(intermediaResult, "intermediateresult.jpg");
 
             // Enviar la imagen a través de la tubería final
-            IPicture finalResult = finalPipe.Send(intermediaResult);
+            IPicture finalResult = finalPipe.Send(initialpicture);
             pictureProvider.SavePicture(finalResult, "finalResult.jpg");
 
         }
