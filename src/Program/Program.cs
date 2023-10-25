@@ -19,9 +19,6 @@ namespace CompAndDel
             FilterConditional filterConditional = new FilterConditional();
             IFilter filterTwitter = new FilterTwitter();
 
-            // Crear tuberías
-            IPipe pipeNull = new PipeNull();
-
             // Crear el PipeConditionalFork para bifurcar según la condición de FilterConditional
             IPipe hasFacePipe = new PipeSerial(filterTwitter, new PipeNull());
             IPipe noFacePipe = new PipeSerial(filterNegative, new PipeNull());
